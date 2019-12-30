@@ -8,11 +8,13 @@ Page({
 		username: '',
 		password: ''
 	},
+	// 监听输入框输入
 	onChange(e) {
 		this.setData({
 			[e.currentTarget.dataset.prop]: e.detail
 		})
 	},
+	// 点击登录按钮,发起请求
 	login() {
 		let that = this
 		request.post('login', {
@@ -40,6 +42,7 @@ Page({
 			}
 		})
 	},
+	// 点击注册
 	toRegister() {
 		wx.navigateTo({
 			url: '../register/index'

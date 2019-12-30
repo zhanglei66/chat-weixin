@@ -45,6 +45,7 @@ Page({
 			url: '../wechat/index'
 		})
 	},
+	// 获取消息记录
 	init() {
 		let that = this
 		request.get('getMsg', {
@@ -78,6 +79,7 @@ Page({
 			})
 		})
 	},
+	// 定价发送按钮发送消息
 	sendMsg() {
 		let that = this
 		let obj = {
@@ -96,6 +98,7 @@ Page({
 			message: ''
 		})
 	},
+	// 接收消息
 	getMsg: function (res) {
 		let self = this
 		let data = JSON.parse(res.data)

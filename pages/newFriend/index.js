@@ -22,6 +22,7 @@ Page({
 			[e.currentTarget.dataset.prop]: e.detail
 		})
 	},
+	// 查询是否存在该用户
 	searchUser() {
 		let that = this
 		request.get('getOneUser', {
@@ -47,6 +48,7 @@ Page({
 			}
 		})
 	},
+	// 点击按钮添加该好友
 	addFriend() {
 		let that = this
 		wx.showModal({
@@ -117,7 +119,8 @@ Page({
 		}).then(res => {
 			that.getFriendRequest()
 		})
-	}
+	},
+	// 待优化,防抖
 	// debounce(fn, interval) {
 	// 	var timer;
 	// 	var gapTime = interval || 1000; //间隔时间，如果interval不传，则默认1000ms

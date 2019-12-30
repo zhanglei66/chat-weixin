@@ -23,11 +23,13 @@ Page({
 	},
 	onLoad() {
 		let that = this
+		// 获取缓存的登录id
 		let id = wx.getStorageSync('id')
 		// let id = '123456'
 		that.setData({
 			'nowLogin.id': id
 		})
+		// 获取登录者信息
 		request.get('getOneUser', {
 			id: that.data.nowLogin.id
 		}).then(res => {
@@ -38,6 +40,7 @@ Page({
 			})
 			wx.setStorageSync('head_img', data.info[0].head_img)
 		})
+		// 发起websocket连接,监听socket事件
 		that.init()
 		that.getFriendRequest()
 	},
@@ -95,6 +98,7 @@ Page({
 			wx.setStorageSync('socket', '')
 		})
 	},
+	// 监听消息
 	getMsg: function(res) {
 		let that = this
 		let data = JSON.parse(res.data)
@@ -117,6 +121,7 @@ Page({
 			}
 		}
 	},
+	// 点击未读消息后,使消息已读
 	clearNotRead(id) {
 		let that = this
 		let lists = that.data.lists
@@ -133,6 +138,7 @@ Page({
 			}
 		})
 	},
+	// 查询是否有好友申请
 	getFriendRequest() {
 		let that = this
 		request.get('friends/getFriendRequest', {

@@ -19,6 +19,7 @@ Page({
 		this.getFriendRequest()
 		this.getFriendList()
 	},
+	// 获取好友列表
 	getFriendList() {
 		let that = this
 		request.get('friends/searchMyFriends', {
