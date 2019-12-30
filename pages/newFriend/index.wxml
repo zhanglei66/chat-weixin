@@ -1,0 +1,35 @@
+<view>
+	<view>
+		<van-cell-group>
+			<van-field 
+				value="{{input}}" 
+				bind:change="onChange" 
+				data-prop="input" 
+				placeholder="邮箱" 
+				left-icon="search" 
+				border="{{ true }}" 
+				use-button-slot
+			>
+				<van-button bindtap="searchUser" slot="button" size="small" type="primary">搜索</van-button>
+			</van-field>
+		</van-cell-group>
+	</view>
+	<view class="geli"></view>
+	<view class="user-info" wx:if="{{user.id!=''}}">
+		<van-image src="{{user.head_img}}" width="170rpx" height="170rpx"></van-image>
+		<view class="user-info-name">{{user.name}}</view>
+		<view class="user-info-id">{{user.id}}</view>
+		<button class="btn" bindtap="addFriend" size="mini" type="primary">添加好友</button>
+	</view>
+	
+	<view wx:for="{{items}}" wx:key="{{item.id}}" class="friReqList">
+		<view class="head_img">
+			<van-image src="{{item.head_img}}" radius="20rpx" width="100rpx" height="100rpx"></van-image>
+		</view>
+		<view class="text">
+			<view>{{item.name}}</view>
+			<view class="tishiwenzi">请求添加你为朋友</view>
+		</view>
+		<button class="friReqList_btn" type="primary" plain bindtap="accept_req" data-id="{{item.id}}">接受</button>
+	</view>
+</view>

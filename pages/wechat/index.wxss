@@ -1,0 +1,29 @@
+page {
+	border-top: 1px solid rgb(219, 219, 219);
+}
+
+.msg_list {
+	display: flex;
+	align-items: center;
+	padding: 10rpx;
+	margin-top: 10rpx;
+	height: 120rpx;
+}
+.headImgView {
+	width: 16%;
+	height: 100%;
+}
+
+.list_name {
+	margin-left: 10rpx;
+	width: 82%;
+	height: 120rpx;
+	border-bottom: 1px solid rgb(219, 219, 219);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.list_name_id {
+	font-size: 30rpx;
+	color: rgb(153, 153, 153);
+}

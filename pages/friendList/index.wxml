@@ -1,0 +1,28 @@
+<view>
+	<view>
+		<scroll-view scroll-y="true" class="scroll_view">
+			<view class="newFriend" bindtap="toNewFriend">
+				<view class="newFriend-pic">
+					<van-image src="http://q2e11jdvp.bkt.clouddn.com/xindepengyou.png" width="100rpx" height="100rpx" radius="20rpx"></van-image>
+					<view wx:if="{{friendReqNum>0}}" class='reddot'>{{friendReqNum}}</view>
+				</view>
+				<view class="newFriend-text">
+					<view>新的朋友</view>
+				</view>
+			</view>
+			<view class="kong_bai"></view>
+			<view class="friend_list_view">
+				<view class="friend_list" wx:for="{{items}}" wx:key="{{item.loginId}}" 
+					bindtap="toChat" data-id="{{item.loginId}}" data-head_img="{{item.head_img}}">
+					<view class="head_img">
+						<van-image src="{{item.head_img}}" radius="20rpx" width="100rpx" height="100rpx"></van-image>
+					</view>
+					<view class="basicInfo">
+						<view>{{item.name}}</view>
+						<view class="basicInfo_id">{{item.loginId}}</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>

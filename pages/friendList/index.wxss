@@ -1,0 +1,54 @@
+page {
+	border-top: 1px solid rgb(219, 219, 219);
+	background-color: rgb(255, 255, 255);
+}
+
+
+.newFriend {
+	display: flex;
+	align-items: center;
+}
+.newFriend-pic {
+	padding: 0.3125rem;
+	position: relative;
+}
+.reddot {
+    width: 50rpx;
+    border-radius: 50rpx;
+    background: red;
+    text-align: center;
+    color: white;
+	position: absolute;
+	left: 80rpx;
+	top: 0;
+}
+
+.newFriend-text {
+	padding: 0.3125rem;
+}
+
+.kong_bai {
+	height: 0.9375rem;
+	background-color: rgb(237, 237, 237);
+}
+
+
+.friend_list_view {
+	margin-top: 0.625rem;
+}
+.friend_list {
+	display: flex;
+	align-items: center;
+}
+.head_img {
+	padding: 0.3125rem;
+}
+.basicInfo {
+	width: 82%;
+	padding: 0.3125rem;
+	border-bottom: 1px solid rgb(219, 219, 219);
+}
+.basicInfo_id {
+	font-size: 30rpx;
+	color: rgb(153, 153, 153);
+}

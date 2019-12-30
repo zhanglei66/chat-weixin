@@ -1,0 +1,4 @@
+.van-button--large {
+	margin-top: 40rpx;
+	height: 400rpx;
+}

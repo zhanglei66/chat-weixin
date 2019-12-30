@@ -1,0 +1,13 @@
+<view>
+	<view class="msg_list" wx:for="{{lists}}" wx:key="{{item.loginId}}" data-id="{{item.loginId}}" 
+			data-head_img="{{item.head_img}}" bindtap="getRecords">
+		<view class="headImgView">
+			<van-icon class="head_img" wx:if="{{item.notSendNum > 0}}" info="{{item.notSendNum}}" name="{{item.head_img}}" size="100rpx" />
+			<van-icon class="head_img" wx:if="{{item.notSendNum == 0}}" name="{{item.head_img}}" size="100rpx" />
+		</view>
+		<view class="list_name">
+			<view list_name_name>{{item.name}}</view>
+			<view class="list_name_id">{{item.loginId}}</view>
+		</view>
+	</view>
+</view>

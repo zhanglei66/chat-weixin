@@ -1,0 +1,15 @@
+<view class="page">
+	<view class="my-information">
+		<view class="info-headImg">
+			<van-image width="120rpx" height="120rpx" src="{{loginUser.head_img}}"></van-image>
+		</view>
+		<view>
+			<view class="info-name">{{loginUser.name}}</view>
+			<view class="info-id">{{loginUser.id}}</view>
+		</view>
+	</view>
+	
+	<view>
+		<button type="warn" class="logout" bindtap="logout">注销</button>
+	</view>
+</view>

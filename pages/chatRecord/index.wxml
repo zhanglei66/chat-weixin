@@ -1,0 +1,27 @@
+<view class="page">
+	<view class="chatPage">
+		<van-overlay z-index="101" show="{{ show }}" bind:click="onClickHide">
+			<view class="overlay">
+				<van-loading color="white" size="24px" vertical>加载中...</van-loading>
+			</view>
+		</van-overlay>
+		
+		<scroll-view class="scroll_view" scroll-y="true" scroll-top="{{top}}">
+			<view class="{{item.control}}" wx:for="{{lists}}" wx:key="{{item.sendId}}">
+				<view>
+					<van-image class="head_img" width="2rem" height="2rem" fit="cover" src="{{item.head_img}}" />
+				</view>
+				<view class="msg">{{item.msg}}</view>
+			</view>
+		</scroll-view>
+		
+		<view class="inputView">
+			<van-cell-group class="inputGroup">
+				<van-field value="{{ message }}" class="chatInput" center clearable placeholder="请输入内容" border="{{ false }}"
+				 use-button-slot bind:change="onChange" data-prop="message">
+					<van-button class="chatBtn" slot="button" size="small" type="primary" bindtap="sendMsg">发送</van-button>
+				</van-field>
+			</van-cell-group>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,47 @@
+{
+	"pages": [
+		"pages/login/index",
+		"pages/wechat/index",
+		"pages/chatRecord/index",
+		"pages/friendList/index",
+		"pages/login_2/index",
+		"pages/my/index",
+		"pages/newFriend/index"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "WeChat",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"position": "bottom",
+		"color": "rgb(0, 0, 0)",
+		"selectedColor": "rgb(8, 193, 97)",
+		"list": [{
+				"pagePath": "pages/wechat/index",
+				"text": "微信",
+				"iconPath": "dist/weixin.png",
+				"selectedIconPath": "dist/weixin_select.png"
+			},
+			{
+				"pagePath": "pages/friendList/index",
+				"text": "通讯录",
+				"iconPath": "dist/friend.png",
+				"selectedIconPath": "dist/friend_select.png"
+			},
+			{
+				"pagePath": "pages/login_2/index",
+				"text": "发现",
+				"iconPath": "dist/faxian.png",
+				"selectedIconPath": "dist/faxian_select.png"
+			},
+			{
+				"pagePath": "pages/my/index",
+				"text": "我",
+				"iconPath": "dist/my.png",
+				"selectedIconPath": "dist/my_select.png"
+			}
+		]
+	}
+}
