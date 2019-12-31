@@ -2,6 +2,7 @@
 	<van-cell-group>
 		<van-field value="{{ username }}" bind:change="onChange" data-prop="username" clearable label="用户名" placeholder="请输入邮箱"/>
 		<van-field value="{{ password }}" bind:change="onChange" data-prop="password" type="password" label="密码" placeholder="请输入密码"/>
+		<van-field value="{{ name }}" bind:change="onChange" data-prop="name" label="名字" placeholder="请输入姓名"/>
 	</van-cell-group>
 	<van-button class="my-button" plain type="primary" size="large" bindtap="register">注册</van-button>
 </view>

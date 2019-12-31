@@ -2,10 +2,12 @@
 //获取应用实例
 const app = getApp()
 
+const request = require('../../utils/index.js')
 Page({
 	data: {
 		username: '',
-		password: ''
+		password: '',
+		name: ''
 	},
 	onChange(e) {
 		this.setData({
@@ -13,23 +15,19 @@ Page({
 		})
 	},
 	register() {
-		wx.request({
-			url: 'http://localhost:8081/zhuce',
-			method: 'POST',
-			data: {
-				loginId: this.data.username,
-				password: this.data.password
-			},
-			success(res) {
-				wx.showToast({
-					title: '注册成功',
-					icon: 'success',
-					mask: true
-				})
-				wx.redirectTo({
-					url: '../login.index'
-				})
-			}
+		request.post('zhuce', {
+			loginId: this.data.username,
+			password: this.data.password,
+			name: this.data.name
+		}).then(res => {
+			wx.showToast({
+				title: '注册成功',
+				icon: 'success',
+				mask: true
+			})
+			wx.redirectTo({
+				url: '../login.index'
+			})
 		})
 	},
 })
